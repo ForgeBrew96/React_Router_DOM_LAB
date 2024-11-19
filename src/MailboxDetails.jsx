@@ -7,6 +7,10 @@ const MailBoxDetails = ({ mailboxes }) => {
         (mailbox) => mailbox._id === Number(mailboxId)
     )
 
+    if (!selectedMailbox) {
+        return <h2>Mailbox Not Found!</h2>
+    }
+
     return (
         <>
             <h2>{selectedMailbox.boxholder}</h2>
